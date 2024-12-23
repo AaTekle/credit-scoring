@@ -6,10 +6,7 @@ I built a credit scoring model to predict the likelihood of credit card default 
 ---
 
 ## Dataset
-I used the **Default of Credit Card Clients Dataset** from the UCI Machine Learning Repository.  
-
-**Citation**:  
-Yeh, I. (2009). *Default of Credit Card Clients [Dataset].* UCI Machine Learning Repository. [https://doi.org/10.24432/C55S3H](https://doi.org/10.24432/C55S3H).
+I used the **Default of Credit Card Clients Dataset** from the UCI Machine Learning Repository. Dataset Citation at bottom of README.
 
 ---
 
