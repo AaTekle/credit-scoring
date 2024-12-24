@@ -43,7 +43,7 @@ st.markdown(
 # Streamlit UI
 st.title("Credit Scoring Prediction App")
 st.write(
-    "This is a machine learning-powered credit loan classification app that predicts the likelihood of a borrower defaulting on a loan. Simply input borrower details like credit limit, repayment history, and payment amounts, and the app provides an easy-to-understand default probability to aid in credit decision-making."
+    "This is a machine learning-powered credit loan classification app that predicts the likelihood of a borrower defaulting on a loan. Simply input borrower details like credit limit, repayment history, and payment amounts, and the app provides an easy-to-understand default probability, helping with credit decision-making."
 )
 st.write(
     "Enter the borrower's details below to predict the likelihood of loan default."
