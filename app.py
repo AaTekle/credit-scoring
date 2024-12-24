@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from catboost import CatBoostClassifier
 
-# Load the trained model
+# Loading in the trained model
 model = CatBoostClassifier()
 model.load_model("catboost_credit_model.cbm")
 
@@ -32,7 +32,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Load Google Font
+# Loading in the Google Font
 st.markdown(
     """
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -103,7 +103,7 @@ with st.expander("Billing and Payment Information"):
     pay_amt5 = st.number_input("Five Months Ago Payment Amount (PAY_AMT5)", min_value=0, value=0)
     pay_amt6 = st.number_input("Six Months Ago Payment Amount (PAY_AMT6)", min_value=0, value=0)
 
-# Combine inputs into a DataFrame with all required features
+# Combining inputs into a DataFrame with all required features
 input_data = pd.DataFrame({
     'LIMIT_BAL': [limit_bal],
     'SEX': [sex],
