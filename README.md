@@ -4,6 +4,7 @@
 I built a credit scoring model to predict the likelihood of credit card default using machine learning. The goal is to predict whether a client will default (1) or not (0). The model uses borrower attributes and payment history as input features.
 ---
 
+
 ## Process
 1. **Data Cleaning**: I dropped unnecessary columns, ensured numeric data types, and handled categorical variables.
 2. **Feature Engineering**: I included repayment history, bill amounts, and demographic features to train the model.
