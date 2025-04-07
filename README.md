@@ -2,12 +2,6 @@
 
 ## Project Overview
 I built a credit scoring model to predict the likelihood of credit card default using machine learning. The goal is to predict whether a client will default (1) or not (0). The model uses borrower attributes and payment history as input features.
-
----
-
-## Dataset
-I used the **Default of Credit Card Clients Dataset** from the UCI Machine Learning Repository. Dataset Citation at bottom of README.
-
 ---
 
 ## Process
