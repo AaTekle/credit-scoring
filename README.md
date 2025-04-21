@@ -1,32 +1,30 @@
 # Credit Scoring Model
 
-## Project Overview
+## Goal
+I aimed to predict whether a loan would be repaid or defaulted on. This was a binary classification task, and the output was a credit score or risk label, such as "good credit" or "bad credit."
 
-I built a credit scoring model to predict the likelihood of credit card default using machine learning. The goal is to predict whether a client will default (1) or not (0). The model uses borrower attributes and payment history as input features.
+## Steps Taken / Process:
 
----
+## Data Loading
+* I loaded the dataset from an Excel file that contained information about credit card clients.
 
-## Process
-1. **Data Cleaning**: I dropped unnecessary columns, ensured numeric data types, and handled categorical variables.
-2. **Feature Engineering**: I included repayment history, bill amounts, and demographic features to train the model.
-3. **Model Training**: I used CatBoostClassifier for its efficiency with categorical data and high performance on tabular datasets.
-4. **Evaluation**: The model’s performance was measured using metrics like ROC-AUC and accuracy.
+## Data Overview
+* The dataset is made up of thousands of rows and columns. Key features included `LIMIT_BAL` (credit limit), `SEX`, `EDUCATION`, `MARRIAGE`, `AGE`, and various payment histories. The target variable was whether the client defaulted on their payment the following month.
 
----
+## Data Cleaning
+* I cleaned the data by removing the `UID` column, which was not needed for training. I also ensured that all column names were formatted correctly and converted numeric columns to the appropriate data types.
 
-## Files
-- **`catboost_credit_model.cbm`**: Trained CatBoost model saved in `.cbm` format.
-- **`app.py`**: UI that allows you to make real-time predictions with the model.
+## Feature Engineering
+* I defined my features (the input data) and the target variable (the output I wanted to predict). The main features I focused on included `EDUCATION`, `MARRIAGE`, and `AGE`.
 
----
+## Splitting the Data - Train Test Split
+* I split the dataset into training and testing sets to evaluate the model's performance. This helped me understand how well the model could predict loan repayment or default.
 
-## How to Use
-1. **Load the Model**: Use the `.cbm` file to load the CatBoost model in any Python environment.
-2. **Predict**: Input borrower details (e.g., credit limit, repayment history, demographic data) to predict default probability.
-3. **Interface**: Run `app.py` with Streamlit to get a web-based interface for the model.
+## Training the Model
+* I trained a CatBoost model using the training data. This model learned from the features to predict the likelihood of default.
 
----
+## Predicting and Evaluating Model Accuracy
+* After training the model, I made predictions on the test data. I evaluated the model's performance using metrics such as accuracy and ROC-AUC score, which indicated how well the model distinguished between good and bad credit risks.
 
-## Dataset Citation
-If you use this project or dataset, cite the dataset:  
-Yeh, I. (2009). *Default of Credit Card Clients [Dataset].* UCI Machine Learning Repository. [https://doi.org/10.24432/C55S3H](https://doi.org/10.24432/C55S3H).
+## Quantitative Results
+* The model achieved an accuracy of approximately 82% and a ROC-AUC score of about 0.78. This indicated that the model was reasonably effective at predicting loan repayment or default. 
